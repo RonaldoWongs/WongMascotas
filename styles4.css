@@ -1,0 +1,296 @@
+html {
+    font-size: 16px;
+    box-sizing: border-box;
+   }
+   
+   *, *::before, *::after {
+       box-sizing: inherit;
+   }
+   
+   body {
+       font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+       font-size: 1rem;
+       margin: 0;
+       line-height: 1,5;
+   }
+   
+   a {
+      text-decoration: none; 
+   }
+   
+   h1, h2, h3 {
+       font-family: 'PT Sans', sans-serif;
+   }
+   
+   img {
+       max-width: 100%;
+       height: auto;
+   }
+   
+   /*HEADER*/
+   
+   .header {
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 100%;
+       z-index: 5;
+   }
+   
+   .header .container {
+       position: relative;
+       height: 150px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       padding: 0 20px;
+       max-width: 1024px;    
+   }
+   
+   .logo {
+       display: flex;
+       align-items: center;
+       gap: 1rem;
+       justify-content: center;
+       color: white;
+   }
+   
+   .logo-img {
+       width: 50px;
+       height: 50px;
+   }
+   
+   .logo-title {
+       font-weight: 400;
+       font-size: 1.8rem;
+   }
+   
+   .logo-text {
+       font-weight: 700;
+   }
+   
+   .nav {
+       display: flex;
+       justify-content: center;
+       gap: 1rem;
+   
+       .nav-link {
+           color: white;
+       }
+   }
+   /*Hero*/
+   
+   .hero {
+       position: relative;
+       min-height: 500px;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       background-image: url('conejo\ rojo.jpg');
+       background-size: cover;
+       background-position: center;
+   }
+   
+   .overlay {
+       position: absolute;
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 0;
+       background-color: rgb(0, 0, 0, .5);
+   }
+   
+   .hero .container {
+       position: relative;
+       text-align: center;
+       color: white;
+       padding: 25px 10px 0;
+       max-width: 1024px;
+   }
+   
+   .hero-title {
+       font-family: 'Berkshire Swash', cursive;
+       font-size: 4rem;
+   }
+   
+   /* blog*/
+   
+   .blog {
+       padding: 50px 0;
+       max-width: 1024px;
+   }
+   
+   .articulos {
+   display: flex;
+   flex-direction: column;
+   gap: 2.5rem;
+   }
+   
+
+   
+   .article-body {
+       padding: 0 20px 20px;
+   }
+   
+   .article-title {
+    background: rgba(255, 253, 253, 0.56);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 4rem;
+    padding: 9px;
+   }
+   
+   .parallax {
+       position: relative;
+       width: 100%;
+       height: 500px;
+       background-image: url('https://source.unsplash.com/random/1920%C3%971080/?pets');
+       background-attachment: fixed;
+       background-size: cover;
+       background-position: center;
+   }
+   
+   .wave {
+       position: absolute;
+       bottom: 0;
+       color: white;
+   }
+   
+   .adoptame {
+       text-align: center;
+   }
+   
+   .adoptame .container {
+       padding: 0 20px;
+       max-width: 1024px;
+   
+   }
+   
+   .adoptame-title {
+       font-size: 3rem;
+       margin-top: 15px;
+       margin-bottom: 10px;
+   }
+   
+   .footer {
+       padding-top: 25px;
+   }
+   
+   .footer .container {
+       padding: 0 0 30px;
+       max-width: 1024px;
+   }
+   
+   .copy {
+       text-align: center;
+   }
+   
+   .copy-title {
+       font-weight: 400;
+       font-size: 1.5rem;
+       color: black;
+       margin-bottom: 10px;
+   }
+   
+   .copy-text {
+       font-weight: 700;
+   
+   }
+   
+   .nav-footer {
+       display: flex;
+       justify-content: center;
+       gap: 1rem;
+   }
+   
+   
+   @media screen and (min-width: 678px) {
+       .header .container {
+           flex-direction: row;
+           justify-content: space-between;
+       } 
+   
+       .hero {
+           min-height: 750px;
+       }
+   
+       .hero-title {
+           font-size: 3rem;
+       }
+   
+       .hero-description {
+           font-size: 1.5rem;
+       }
+   
+       .blog .container {
+           padding: 0 20px;
+       }
+   
+       .article-img {
+           border-radius: 25px;
+           overflow: hidden
+       }
+   
+       .article-img img {
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           object-position: center;;
+       }
+   
+       .parallax {
+           height: 1000px;
+       }
+   
+       .articulos .article:nth-child(even) {
+           flex-direction: row-reverse;
+   
+       }
+   }
+   
+   @media screen and (min-width: 1024px) {
+       .header .container,
+       .hero .container, .blog,
+       .adoptame .container,
+        .footer .container {
+     margin: 0 auto;
+       }
+       .article-description {
+        background: rgba(255, 253, 253, 0.56);
+        backdrop-filter: blur(15px);
+        border-radius: 15px;
+        font-weight: 600;
+        font-size: 30px;
+        padding: 12px;
+       }
+   }
+
+   .bg-blog {
+    background-image: url('collageconejos.png');
+    background-size: cover; /* Puedes usar 'cover' para ajustarla a lo largo y ancho del contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+
+   .article-img {
+    animation: zoom 5s infinite;
+}
+
+@keyframes zoom {
+    0% {
+      transform: scale(.9);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(.9);
+    }
+  }
+   
+   
+   
